@@ -13,7 +13,7 @@
 
 ## Styles Changes
 
-- [x] 1. Fixed a bug in the repository selection block where it caused horizontal scrolling to appear.
+- [ ] 1. Fixed a bug in the repository selection block where it caused horizontal scrolling to appear.
 - [ ] 2. Migrated styles from sx to class based.
 
 ## API Requests Changes

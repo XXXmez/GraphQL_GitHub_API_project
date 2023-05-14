@@ -7,8 +7,8 @@
 
 <p align="center">
   <a href="#styles-changes">Styles Changes</a> •
-  <a href="#API Requests Changes">API Requests Changes</a> •
-  <a href="#Code Comments">Code Comments</a>
+  <a href="#API-Requests-Changes">API Requests Changes</a> •
+  <a href="#Code-Comments">Code Comments</a>
 </p>
 
 ## Styles Changes

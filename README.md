@@ -6,9 +6,9 @@
 </p>
 
 <p align="center">
-  <a href="#installation">Installation</a> •
-  <a href="#usage">Usage</a> •
-  <a href="#license">License</a>
+  <a href="#Styles Changes">Styles Changes</a> •
+  <a href="#API Requests Changes">API Requests Changes</a> •
+  <a href="#Code Comments">Code Comments</a>
 </p>
 
 ## Styles Changes

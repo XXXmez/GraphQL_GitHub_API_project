@@ -4,7 +4,7 @@ React/redux + graphql project with repositories search on github using api githu
 <h1 align="center">Opencode</h1>
 
 <p align="center">
-  <img src="https://img.shields.io/github/license/XXXmez/opencode?style=flat-square" alt="License">
+  <img src="https://img.shields.io/github/license/XXXmez/GraphQL_GitHub_API_project?style=flat-square" alt="License">
 </p>
 
 <p align="center">

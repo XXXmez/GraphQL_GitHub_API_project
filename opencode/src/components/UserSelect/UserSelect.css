@@ -1,0 +1,63 @@
+.no-user-select {
+  padding: 24px;
+  position: sticky;
+  top: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-select {
+  padding: 24px;
+  position: sticky;
+  top: 0;
+}
+
+.user-select__title {
+  font-size: 32px;
+  word-wrap: break-word;
+}
+
+.user-select__items {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+.user-select__languages {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+
+.user-select__license {
+  margin-top: 24px;
+}
+
+.technology-item {
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  font-size: 14px;
+  padding: 3px 10px;
+  background: rgba(0, 0, 0, 0.08);
+  color: black;
+}
+.technology-item__main {
+  padding: 7px 10px;
+  background: #2196f3;
+  color: white;
+}
+
+.stars-item {
+  display: flex;
+  align-items: center;
+}
+.stars-item__icon {
+  color: orange;
+  margin-right: 8px;
+}

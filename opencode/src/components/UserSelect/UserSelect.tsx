@@ -7,6 +7,8 @@ import StarsItem from "./StarsItem";
 import { useSelector } from "react-redux";
 import { RootState } from "../../redux/store";
 
+import "./UserSelect.css";
+
 const UserSelect: React.FC = () => {
   const selectedRepository = useSelector(
     (state: RootState) => state.selectedRepos
@@ -14,48 +16,27 @@ const UserSelect: React.FC = () => {
 
   if (!selectedRepository.selected) {
     return (
-      <Box
-        padding="24px"
-        position="sticky"
-        top="0"
-        height={"100%"}
-        display="flex"
-        justifyContent="center"
-        alignItems={"center"}
-      >
+      <Box className="no-user-select">
         <p>Выберите репозитарий</p>
       </Box>
     );
   }
 
   return (
-    <Box padding="24px" position="sticky" top="0">
-      <Typography sx={{ fontSize: "32px" }}>
+    <Box className="user-select">
+      <Typography className="user-select__title">
         {selectedRepository.name}
       </Typography>
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "space-between",
-          marginTop: "16px",
-        }}
-      >
+      <Box className="user-select__items">
         <TechnologyItem technology={selectedRepository.mainLang} main={true} />
         <StarsItem count={selectedRepository.countStars} />
       </Box>
-      <Box
-        sx={{
-          display: "flex",
-          gap: "8px",
-          marginTop: "16px",
-          flexWrap: "wrap",
-        }}
-      >
+      <Box className="user-select__languages">
         {selectedRepository.languages.map((lang, ind) => (
           <TechnologyItem key={ind} technology={lang} main={false} />
         ))}
       </Box>
-      <Box sx={{ marginTop: "24px" }}>
+      <Box className="user-select__license">
         <p>{selectedRepository.license || "No license information"}</p>
       </Box>
     </Box>

@@ -1,6 +1,5 @@
 <h1 align="center">opencode - updated branch</h1>
 
-
 <p align="center">
   This branch of the opencode project contains updates to various aspects of the project. The following sections describe the changes made in each area:
 </p>
@@ -13,7 +12,7 @@
 
 ## Styles Changes
 
-- [ ] 1. Fixed a bug in the repository selection block where it caused horizontal scrolling to appear.
+- [x] 1. Fixed a bug in the block for displaying the selected repository, which caused vertical scrolling
 - [ ] 2. Migrated styles from sx to class based.
 
 ## API Requests Changes
@@ -29,6 +28,7 @@
 This project is licensed under the MIT License. See the LICENSE file for more information.
 
 ### To run the updated branch, follow the steps below:
+
 1. Download this repository
 2. Switch to the updated branch
 3. In the terminal, run `npm i` to install dependencies

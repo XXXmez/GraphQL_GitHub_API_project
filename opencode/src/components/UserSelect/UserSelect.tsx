@@ -18,7 +18,7 @@ const UserSelect: React.FC = () => {
         padding="24px"
         position="sticky"
         top="0"
-        height={"100vh"}
+        height={"100%"}
         display="flex"
         justifyContent="center"
         alignItems={"center"}

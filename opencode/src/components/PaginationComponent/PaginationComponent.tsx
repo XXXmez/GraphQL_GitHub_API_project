@@ -13,6 +13,8 @@ import {
 } from "../../graphql/requests";
 import { fetchRepositoriesAsync } from "../../redux/fetch/fetchRepositoriesAsync";
 
+import s from "./PaginationComponent.module.scss";
+
 const PaginationComponent: React.FC = () => {
   const sort = useSelector((state: RootState) => state.settings.sort);
   const paginationPage = useSelector(
@@ -20,6 +22,9 @@ const PaginationComponent: React.FC = () => {
   );
   const data = useSelector((state: RootState) => state.repositories.data);
   const loading = useSelector((state: RootState) => state.repositories.loading);
+  const disabledControlButtons = {
+    disabled: loading,
+  };
   const repositoryCount = useSelector(
     (state: RootState) => state.settings.repositoryCount
   );
@@ -103,33 +108,11 @@ const PaginationComponent: React.FC = () => {
   }
 
   return (
-    <Stack
-      direction="row"
-      alignItems="center"
-      justifyContent="center"
-      position="fixed"
-      bottom="0"
-      width="100%"
-      sx={{ background: "white" }}
-    >
+    <Stack className={s.stack}>
       <TablePagination
-        SelectProps={{
-          disabled: loading,
-        }}
-        backIconButtonProps={
-          loading
-            ? {
-                disabled: loading,
-              }
-            : undefined
-        }
-        nextIconButtonProps={
-          loading
-            ? {
-                disabled: loading,
-              }
-            : undefined
-        }
+        SelectProps={disabledControlButtons}
+        backIconButtonProps={disabledControlButtons}
+        nextIconButtonProps={disabledControlButtons}
         component="div"
         count={repositoryCount}
         page={page}

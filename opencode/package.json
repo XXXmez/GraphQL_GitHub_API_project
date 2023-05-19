@@ -54,6 +54,8 @@
   },
   "devDependencies": {
     "@types/aria-query": "^5.0.1",
-    "@types/http-proxy": "^1.17.11"
+    "@types/http-proxy": "^1.17.11",
+    "@types/sass": "^1.45.0",
+    "sass": "^1.62.1"
   }
 }

@@ -8,7 +8,7 @@ import TableHeader from "./TableHeader";
 import TableItem from "./TableItem";
 import ClipLoader from "react-spinners/ClipLoader";
 
-import s from "./ListSearch.module.css";
+import s from "./ListSearch.module.scss";
 
 const ListSearch: React.FC = () => {
   const loadingRepositories: boolean = useSelector(

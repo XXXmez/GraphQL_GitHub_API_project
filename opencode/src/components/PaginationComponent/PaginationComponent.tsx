@@ -46,7 +46,7 @@ const PaginationComponent: React.FC = () => {
     newPage: number
   ): void => {
     if (newPage < page) {
-      console.log('Нажата кнопка "назад"');
+      // console.log('Нажата кнопка "назад"');
       if (pageInfo.hasPreviousPage) {
         dispatch(
           fetchRepositoriesAsync({
@@ -59,7 +59,7 @@ const PaginationComponent: React.FC = () => {
         );
       }
     } else if (newPage > page) {
-      console.log("Кнопка вперед");
+      // console.log("Кнопка вперед");
       if (pageInfo.hasNextPage) {
         dispatch(
           fetchRepositoriesAsync({

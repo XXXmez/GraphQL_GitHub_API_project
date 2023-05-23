@@ -1,0 +1,19 @@
+.appBar {
+  background: #00838f;
+
+  &_stack {
+    width: 100%;
+    height: 42px;
+  }
+
+  &_outlinedInput {
+    background: white;
+    font-size: 14px;
+    max-width: 910px;
+    width: 100%;
+  }
+
+  &_searchButton {
+    background: #2196f3;
+  }
+}

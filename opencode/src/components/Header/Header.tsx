@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { ThunkDispatch, AnyAction } from "@reduxjs/toolkit";
 import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../redux/store";
+import { RootState } from "../../redux/store";
 import { AppBar, Toolbar, Stack, Button, OutlinedInput } from "@mui/material";
-import { GET_REPOSITIRIES } from "../graphql/requests";
-import { setPaginationPage } from "../redux/slice/SettingsSlice";
-import { fetchRepositoriesAsync } from "../redux/fetch/fetchRepositoriesAsync";
+import { GET_REPOSITIRIES } from "../../graphql/requests";
+import { setPaginationPage } from "../../redux/slice/SettingsSlice";
+import { fetchRepositoriesAsync } from "../../redux/fetch/fetchRepositoriesAsync";
 import SnackbarComponent from "./SnackbarComponent";
+
+import s from "./Header.module.scss";
 
 const Header: React.FC = () => {
   const dispatch = useDispatch<ThunkDispatch<RootState, void, AnyAction>>();
@@ -71,27 +73,18 @@ const Header: React.FC = () => {
   }, [isError, isEmpty]);
 
   return (
-    <AppBar sx={{ background: "#00838F" }} position="static">
+    <AppBar className={s.appBar} position="static">
       <Toolbar>
-        <Stack
-          spacing={2}
-          direction="row"
-          sx={{ width: "100%", height: "42px" }}
-        >
+        <Stack spacing={2} direction="row" className={s.appBar_stack}>
           <OutlinedInput
             value={valueInputSearch}
             onChange={(e) => setValueInputSearch(e.target.value)}
             placeholder="Введите поисковый запрос"
-            sx={{
-              background: "white",
-              fontSize: "14px",
-              maxWidth: "910px",
-              width: "100%",
-            }}
+            className={s.appBar_outlinedInput}
           />
           <Button
             variant="contained"
-            sx={{ background: "#2196F3" }}
+            className={s.appBar_searchButton}
             onClick={handlerClickSeach}
           >
             Найти

@@ -1,9 +1,11 @@
 import React from "react";
 import { Box, Grid, Typography } from "@mui/material";
-import UserSelect from "./UserSelect/UserSelect";
-import ListSearch from "./ListSearch/ListSearch";
+import UserSelect from "../UserSelect/UserSelect";
+import ListSearch from "../ListSearch/ListSearch";
 import { useSelector } from "react-redux";
-import { RootState } from "../redux/store";
+import { RootState } from "../../redux/store";
+
+import s from "./Content.module.scss";
 
 const Content: React.FC = () => {
   const dataRepositories = useSelector(
@@ -15,13 +17,8 @@ const Content: React.FC = () => {
 
   if (!dataRepositories.length && !loadingRepositories) {
     return (
-      <Box
-        minHeight={"calc(100vh - 64px)"}
-        display="flex"
-        alignItems={"center"}
-        justifyContent="center"
-      >
-        <Typography fontSize={46} color="#4F4F4F">
+      <Box className={s.content}>
+        <Typography className={s.content_welcome_message}>
           Добро пожаловать
         </Typography>
       </Box>
@@ -29,11 +26,11 @@ const Content: React.FC = () => {
   }
 
   return (
-    <Grid container style={{ minHeight: "calc(100vh - 64px)", height: "auto" }}>
+    <Grid container className={s.content}>
       <Grid item xs={8}>
         <ListSearch />
       </Grid>
-      <Grid item xs={4} sx={{ background: "#f2f2f2" }}>
+      <Grid item xs={4} className={s.content_select}>
         <UserSelect />
       </Grid>
     </Grid>
